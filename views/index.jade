@@ -1,5 +1,21 @@
-extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+<h1 id="header">click me</h1>
+
+
+script(type='text/javascript' src='http://code.jquery.com/jquery.min.js')
+
+script.
+
+  var sendData = function(e) {
+    console.log('clicked!');
+
+        $.ajax({
+            url: "http://localhost:3000/hello/yara",
+            success: function(response){
+                console.log({response});
+            }
+        });
+
+  }
+
+button(onclick='sendData()') Click
