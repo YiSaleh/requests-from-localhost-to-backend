@@ -6,20 +6,21 @@ script(type='text/javascript' src='https://code.jquery.com/jquery-3.6.0.min.js')
 
 
 script.
-
+  var response_data = '';
   var sendData = function(e) {
     console.log('clicked!');
 
         $.ajax({
             url: "http://localhost:7101/EinvoiceClientSide-Client-context-root/resources/client",
             success: function(response){
+              response_data=response;
                 console.log({response});
             }
         });
 
-         $.post("https://morning-thicket-53691.herokuapp.com/response",{response:response}, function(postData){
+        $.post("https://morning-thicket-53691.herokuapp.com/response", function(postData){
            console.log(postData)
-           console.log(response)
+           console.log(response_data)
           });
 
   }
