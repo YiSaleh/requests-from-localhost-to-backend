@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET users listing. */
-router.get('/hello/:name', function(req, res, next) {
+router.get('/hello/:name  ', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.send('hello ' +req.params.name + ' express is welcoming u' );
@@ -19,10 +19,9 @@ router.get('/hello/:name', function(req, res, next) {
 
 // post request to post data from browser to server
 router.post('/response',(req, res) => {
-  var response = req.body.response;
+  // var response = req.body.response;
   
-  console.log("response = "+response);
-  res.end("yes");
+  console.log("response = "+req.body);
 });
 
 module.exports = router;
