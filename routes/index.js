@@ -20,8 +20,9 @@ router.get('/hello/:name  ', function(req, res, next) {
 // post request to post data from browser to server
 router.post('/response',(req, res) => {
   // var response = req.body.response;
-  
-  console.log("response = "+req.body);
+  console.log(`request recieved`);
+  console.log(req.body);
+  res.send('hello world');
 });
 
 module.exports = router;
