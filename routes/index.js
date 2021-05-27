@@ -22,7 +22,7 @@ router.post('/response',(req, res) => {
   // var response = req.body.response;
   console.log(`request recieved`);
   console.log(req.body);
-  res.send('hello world');
+  res.send('hello world'+ JSON.stringify(req.body));
 });
 
 module.exports = router;
