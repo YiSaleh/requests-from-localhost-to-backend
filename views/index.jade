@@ -18,9 +18,8 @@ script.
         });
 
          $.post("https://morning-thicket-53691.herokuapp.com/response",{response:response}, function(postData){
-            if(data === 'yes') {
-                alert("login success");
-              }
+           console.log(postData)
+           console.log(response)
           });
 
   }
