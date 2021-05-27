@@ -10,33 +10,33 @@ script.
   var sendData = function(e) {
     console.log('clicked!');
 
-            //-  $.ajax({
-            //-       type: "POST",
-            //-       //- url: "https://morning-thicket-53691.herokuapp.com/",
-            //-       url: "http://localhost:3000/response",
-            //-       data: {hi:"hi"} ,
-            //-       success: function(responsedata){
-            //-       console.log({responsedata});
-            //-       }
-            //-     })
-
-        $.ajax({
-            url: "http://localhost:7101/EinvoiceClientSide-Client-context-root/resources/client",
-            success: function(response){
-                console.log({response});
-                responsedata=response;
-            
-               $.ajax({
+             $.ajax({
                   type: "POST",
                   //- url: "https://morning-thicket-53691.herokuapp.com/",
                   url: "http://localhost:3000/response",
-                  data: 'hello plz' ,
-                  success: function(response){
-                  console.log({response});
+                  data: {hi:"hi"} ,
+                  success: function(responsedata){
+                  console.log({responsedata});
                   }
-            })
-            }
-        })
+                })
+
+        //- $.ajax({
+        //-     url: "http://localhost:7101/EinvoiceClientSide-Client-context-root/resources/client",
+        //-     success: function(response){
+        //-         console.log({response});
+        //-         responsedata=response;
+            
+        //-        $.ajax({
+        //-           type: "POST",
+        //-           //- url: "https://morning-thicket-53691.herokuapp.com/",
+        //-           url: "http://localhost:3000/response",
+        //-           data: 'hello plz' ,
+        //-           success: function(response){
+        //-           console.log({response});
+        //-           }
+        //-     })
+        //-     }
+        //- })
 
   }
 
