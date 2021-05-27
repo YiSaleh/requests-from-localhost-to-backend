@@ -10,10 +10,10 @@ router.get('/', function(req, res, next) {
 
 /* GET users listing. */
 router.get('/hello/:name', function(req, res, next) {
-  console.log({req: req.params.name});
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.send('hello ' +req.params.name + ' express is welcoming u' );
+  console.log({req: req.params.name});
   
 });
 
