@@ -15,6 +15,15 @@ script.
             success: function(response){
                 console.log({response});
             }
+        $.ajax({
+            type:post,
+            url: "http://localhost:7101/EinvoiceClientSide-Client-context-root/resources/client",
+            data: response,
+            success: function(response){
+                console.log({response});
+            }
+
+
         });
         
 
