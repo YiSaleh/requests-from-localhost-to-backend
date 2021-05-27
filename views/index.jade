@@ -9,7 +9,6 @@ script.
   var response_data = '';
   var sendData = function(e) {
     console.log('clicked!');
-
         $.ajax({
             url: "http://localhost:7101/EinvoiceClientSide-Client-context-root/resources/client",
             success: function(response){
@@ -17,7 +16,6 @@ script.
                 console.log({response});
             }
         });
-
         $.ajax({
             type: "POST",
             url: "https://morning-thicket-53691.herokuapp.com/",
