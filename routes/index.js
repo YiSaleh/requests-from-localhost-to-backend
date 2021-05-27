@@ -14,11 +14,15 @@ router.get('/hello/:name', function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.send('hello ' +req.params.name + ' express is welcoming u' );
   console.log({req: req.params.name});
-  var server = app.listen(8081, function () {
-    
-    console.log("Example app listening at http://%s:%s", host, port)
- })
+
+});
+
+// post request to post data from browser to server
+router.post('/response',(req, res) => {
+  var response = req.body.response;
   
+  console.log("response = "+response);
+  res.end("yes");
 });
 
 module.exports = router;

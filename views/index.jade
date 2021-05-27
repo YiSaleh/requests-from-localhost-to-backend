@@ -14,10 +14,14 @@ script.
             url: "http://localhost:7101/EinvoiceClientSide-Client-context-root/resources/client",
             success: function(response){
                 console.log({response});
-
-                
             }
         });
+
+         $.post("http://localhost:3000/response",{response:response}, function(postData){
+            if(data === 'yes') {
+                alert("login success");
+              }
+          });
 
   }
 
